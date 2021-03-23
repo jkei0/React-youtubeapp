@@ -12,6 +12,7 @@ function App() {
   const [categories, setCategories] = useState([])
   const [category, setCategory] = useState(0)
   const [errorMessage, setErrorMessage] = useState(null)
+  const [currentCountry, setCurrentCountry] = useState(null)
   const categoryLink = 'https://www.googleapis.com/youtube/v3/videoCategories'
   const countryLink = 'https://www.googleapis.com/youtube/v3/i18nRegions'
   const apiKey = process.env.REACT_APP_API_KEY
@@ -72,7 +73,7 @@ function App() {
           <div id='videos'>
             <Videos 
               videos={videos}
-              country={country}
+              country={currentCountry}
             />
           </div>
         </div>
@@ -94,6 +95,7 @@ function App() {
             countries={countries}
             setVideos={setVideos}
             setNotification={setError}
+            setCurrentCountry={setCurrentCountry}
           />
         </div>
       </div>
