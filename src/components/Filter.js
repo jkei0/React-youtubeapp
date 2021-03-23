@@ -36,7 +36,7 @@ const Filter = (props) => {
         props.setNotification('Invalid country')
       }
       else {
-        props.setCurrentCountry(props.country)
+        if(props.country !== props.currentCountry) props.setCurrentCountry(props.country)
         await fetchVideos()
       }
     } catch ( err ) {

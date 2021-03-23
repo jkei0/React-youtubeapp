@@ -68,6 +68,7 @@ function App() {
               countries={countries}
               setVideos={setVideos}
               setNotification={setError}
+              setCurrentCountry={setCurrentCountry}
             />
           </div>
           <div id='videos'>
