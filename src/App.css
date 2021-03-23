@@ -1,0 +1,32 @@
+#div1 {
+  align-items: center;
+  position: absolute;
+  width: 10%;
+  left: 40%;
+}
+
+#div2 {
+  background: rgb(211, 245, 183);
+}
+
+#filt {
+  position: relative;
+  width: 100%;
+  padding-top: 3%;
+  padding-left: 40%;
+  align-items: center;
+  background-color: #ffdad7;
+}
+
+#videos {
+  position: relative;
+}
+
+#div3 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 99%;
+  width: 99%;  
+  background: rgb(211, 245, 183);
+}

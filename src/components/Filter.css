@@ -1,0 +1,17 @@
+#categories {
+  min-width: 210px;
+}
+
+#searchForm {
+  position: relative;
+  left: 0%;
+  width: 240px;
+}
+
+#categoryText {
+  padding-top: 10px;
+}
+
+#submitButton {
+  padding-top: 10px;
+}
