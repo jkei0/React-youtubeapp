@@ -29,6 +29,7 @@ const Videos = (props) => {
             <ReactPlayer className='reactPlayer'
             url={`${videoUri}${video.id}`}
             controls={true}
+            width='90%'
             light={true}
             style={playerStyle}
             />
