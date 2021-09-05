@@ -50,6 +50,7 @@ const Filter = (props) => {
         <div>
           <Autocomplete
             id='countries'
+            value={props.country}
             options={props.countries}
             getOptionLabel={(country) => country.snippet.name}
             renderInput={(params) => <TextField id='text' {...params} label="Country" variant="outlined" />}

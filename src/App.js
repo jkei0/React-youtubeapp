@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   const [videos, setVideos] = useState(null)
-  const [country, setCountry] = useState('')
+  const [country, setCountry] = useState(null)
   const [countries, setCountries] = useState(null)
   const [categories, setCategories] = useState([])
   const [category, setCategory] = useState(0)
@@ -55,11 +55,11 @@ function App() {
 
   if (videos !== null) {
     return (
-      <div>
+      <div id='parent'>
         <Notification message={errorMessage} />
-        <div id='div2'>
-          <div id='filt'>
-            <Filter 
+        <div id='filt'>
+          <div id='form'>
+            <Filter
               country={country} 
               setCountry={setCountry}
               categories={categories}
@@ -69,8 +69,10 @@ function App() {
               setVideos={setVideos}
               setNotification={setError}
               setCurrentCountry={setCurrentCountry}
-            />
+          />
           </div>
+        </div>
+        <div id='div2'>
           <div id='videos'>
             <Videos 
               videos={videos}
@@ -83,11 +85,10 @@ function App() {
   }
 
   return (
-    <div>
+    <div id='div3'>
       <Notification message={errorMessage} />
-      <div id='div3'>
         <div id='div1'>
-          <Filter 
+          <Filter
             country={country} 
             setCountry={setCountry}
             categories={categories}
@@ -99,7 +100,6 @@ function App() {
             setCurrentCountry={setCurrentCountry}
           />
         </div>
-      </div>
     </div>
   )
 
