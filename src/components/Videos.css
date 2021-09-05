@@ -1,12 +1,17 @@
-.title {
-  padding-left: 30%;
+#video-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.link {
-  padding-left: 30%;
+.singleVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#title {
-  padding-left: 40%;
-  padding-top: 0%;
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

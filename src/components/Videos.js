@@ -16,27 +16,27 @@ const Videos = (props) => {
   }
 
   const playerStyle = {
-    paddingTop: '3%',
-    paddingLeft: '30%',
-    top: '-40%',
+    marginTop: '3%',
+    alignItems: 'center',
   }
 
   return (
-    <div id='d'>
-      <h3 id='title'> Popular videos in {props.country.snippet.name}</h3>
-      {props.videos.map(video => (
-        <div key={video.id}>
-          <ReactPlayer
-          className='player'
-          url={`${videoUri}${video.id}`}
-          controls={true}
-          light={true}
-          style={playerStyle}
-          />
-          <h3 className='title'>{video.snippet.title}</h3>
-          <a className='link' href={`${channelUri}/${video.snippet.channelId}`}>{video.snippet.channelTitle}</a>
-        </div>
-      ))}
+    <div id='parent'>
+      <h3 id='title'>Popular videos in {props.country.snippet.name}</h3>
+      <div id='video-wrapper'>
+        {props.videos.map(video => (
+          <div className='singleVideo' key={video.id}>
+            <ReactPlayer className='reactPlayer'
+            url={`${videoUri}${video.id}`}
+            controls={true}
+            light={true}
+            style={playerStyle}
+            />
+            <h3 className='title'>{video.snippet.title}</h3>
+            <a className='link' href={`${channelUri}/${video.snippet.channelId}`}>{video.snippet.channelTitle}</a>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
